@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ajaykumar - Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+       
+        #login-form {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        #login-form h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        #login-form input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #login-form button {
+            width: 95%;
+            padding: 10px;
+            background: #4A90E2;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #login-form button:hover {
+            background: #357ABD;
+        }
+    </style>
+    <script>
+        function validateLogin(event) {
+            event.preventDefault(); 
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "ajaykumar" && password === "12345") {
+                alert("Login successful!");
+                document.getElementById("login-form").style.display = "none";
+                document.getElementById("portfolio-content").style.display = "block";
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    
+    <div id="login-form">
+        <h2>Login</h2>
+        <form onsubmit="validateLogin(event)">
+            <input type="text" id="username" name="username" placeholder="Username" required><br>
+            <input type="password" id="password" name="password" placeholder="Password" required><br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="portfolio-content" style="display: none;">
+        <header>
+            <h1>AJAY KUMAR</h1>
+            <p>Data Science Student | Data analyst</p>
+        </header>
+
+        <main>
+            <section>
+                <h2>👋 About Me</h2>
+                <p>
+                    Hello! I'm Ajay kumar, 2nd year Engineering student passionate about technology and innovation. I enjoy learning new skills and working on exciting projects
+                    I enjoy creating smart solutions that solve real-world problems, especially in healthtech and public
+                    service. I’m skilled in Python, SQL, Power BI, tools.
+                </p>
+            </section>
+
+            <section>
+                <h2>🎓 Certifications</h2>
+                <ol>
+                    <li>Power BI Virtual Internship - PwC Switzerland (Forage)</li>
+                    <li>AI for Everyone - Coursera (Andrew Ng)</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>🏆 Achievements</h2>
+                <ol>
+                    <li>secured 3rd position in cosmoclenz hackothon </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>🚀 Projects</h2>
+                <ul>
+                    <li>
+                        <strong>medco - IoT-based Health Monitoring System</strong><br> 
+                        InnoMedTech is an innovative healthcare project focused on cardiovascular monitoring using IoT sensors. It tracks vital signs like ECG, heart rate, temperature,
+                        and oxygen levels in real time. The system uses machine learning to analyze anomalies and send emergency alerts to caregivers. Designed to work with a mobile app and cloud dashboard, it aims to reduce heart-related health risks and
+                        enable early intervention. Ideal for elderly patients and remote health monitoring.
+                    </li>
+                    <li>
+                        <strong>AgriTech - AI Crop Detection System</strong><br> 
+                        AgriTech is an AI-powered IoT-based device designed to assist farmers in identifying crop health and detecting diseases. Using advanced image recognition and machine learning algorithms, the system analyzes crop images to provide real-time
+                        insights. It helps farmers optimize their yield by offering actionable recommendations for irrigation, fertilization, and pest control. AgriTech is a step toward sustainable and efficient farming practices.
+                    </li>
+                    <li>
+                        <strong>Battle Grounds - PUBG Winning Chance Predictor</strong><br> 
+                        Battle Grounds is a data-driven project that calculates the winning probability of players in PUBG (PlayerUnknown's Battlegrounds). By analyzing player statistics such as kills, damage dealt, survival time, and loot collected, the system
+                        uses machine learning models to predict the likelihood of winning. This project is aimed at enhancing the gaming experience by providing players with actionable insights to improve their strategies.
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>📞 Contact</h2>
+                <p>Email: <a href="mailto:ajaykumar123@gmail.com">ajaykumar123@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/ajaykumar" target="_blank">www.linkedin.com/ajaykumar</a></p>
+            </section>
+        </main>
+
+        <footer>
+            © Ajay X Engineer
+        </footer>
+    </div>
+
+</body>
+
+</html>
